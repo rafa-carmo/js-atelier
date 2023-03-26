@@ -1,4 +1,6 @@
+import React from 'react'
 import './globals.css'
+import { Header } from '@comp/Header'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-background">
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
