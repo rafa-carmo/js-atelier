@@ -6,7 +6,9 @@ export function About() {
       <div className="md:max-w-full max-w-xl flex flex-col gap-4">
         <div className="flex flex-col gap-16 sm:gap-2">
           <Heading>Sobre</Heading>
-          <h3 className="font-bold text-3xl">Bem Vindo a JS Atelier</h3>
+          <h3 className="font-bold font-title text-title">
+            Bem Vindo a JS Atelier
+          </h3>
         </div>
         <p className="text-sm">
           Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco

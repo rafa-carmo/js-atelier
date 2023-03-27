@@ -3,8 +3,8 @@ export function Hero() {
     <section className="bg-white h-hero grid place-items-center">
       <div className="container mx-auto flex items-center flex-col gap-20">
         <div className="flex items-center flex-col gap-3">
-          <h2 className="font-bold text-3xl font-sans">JS Atelier</h2>
-          <h2 className="font-bold text-3xl font-sans">
+          <h2 className="font-bold text-title font-title">JS Atelier</h2>
+          <h2 className="font-bold text-title font-title">
             Maquiadora Profissional
           </h2>
         </div>
