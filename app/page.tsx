@@ -4,7 +4,6 @@ import { About } from '@/components/About'
 import { Hero } from '@/components/Hero'
 import { PostCard } from '@/components/Post-Card'
 import { Heading } from '@/components/Heading'
-import { useState } from 'react'
 import { SliderComponent } from '@/components/Slider'
 import { PortfolioCard } from '@/components/Portfolio-Card'
 import { HobbieCard } from '../components/Hobbie-Card/index'
@@ -50,8 +49,8 @@ export default function Home() {
             <div className="flex flex-col justify-around lg:w-[412px] gap-5 md:gap-0">
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s,
+                industry. Lorem Ipsum has been the industrys standard dummy text
+                ever since the 1500s,
               </p>
               <button className="bg-background/40 px-9 py-4 border font-bold uppercase hover:bg-background/75 transition-colors duration-500">
                 Entre em contato
