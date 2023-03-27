@@ -10,7 +10,6 @@ import { PortfolioCard } from '@/components/Portfolio-Card'
 import { HobbieCard } from '../components/Hobbie-Card/index'
 
 export default function Home() {
-  const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7, 8])
   return (
     <main>
       <Hero />
@@ -20,7 +19,7 @@ export default function Home() {
           <Heading>Ultimos posts do Blog</Heading>
         </div>
         <SliderComponent className="py-24">
-          {items.map((item) => (
+          {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
             <PostCard key={item} title={`${item}`} />
           ))}
         </SliderComponent>

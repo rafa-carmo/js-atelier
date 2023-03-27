@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-background">
+      <body className="bg-background scroll-smooth">
         <Header />
         {children}
         <Footer />
