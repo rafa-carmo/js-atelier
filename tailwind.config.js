@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        title: 'Roboto',
+      },
+      fontSize: {
+        title: ['34px', '54px'],
+      },
       colors: {
         background: '#EEE9E3',
       },
@@ -15,5 +21,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 }
