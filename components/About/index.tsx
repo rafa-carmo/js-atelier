@@ -11,18 +11,18 @@ export function About() {
           </h3>
         </div>
         <p className="text-sm">
-          Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco
-          cillum dolor. Voluptate exercitation incididunt aliquip deserunt
-          reprehenderit elit laborum. Nulla Lorem mollit cupidatat irure.
-          Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation
-          incididunt aliquip deserunt reprehenderit elit laborum. Nulla Lorem
-          mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor.
-          Voluptate exercitation incididunt aliquip deserunt reprehenderit elit
-          laborum.
+          Oi, meu nome é Jeniffer e eu sou uma maquiadora apaixonada por beleza!
+          Há anos venho trabalhando nessa área, atendendo a noivas, modelos e
+          pessoas comuns que querem se sentir ainda mais bonitas e confiantes.
+          <br />
+          Eu acredito que a maquiagem é uma forma maravilhosa de realçar a
+          beleza única de cada pessoa. Por isso, sempre busco criar looks que
+          combinem com o estilo de vida e as características pessoais de cada
+          cliente.
         </p>
       </div>
       <img
-        src="https://scontent-gig2-1.xx.fbcdn.net/v/t39.30808-6/223266080_2865183517067610_2744943178628486717_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=D-TRjxlP-igAX-BlxX9&_nc_ht=scontent-gig2-1.xx&oh=00_AfD0LGcr7z_xM2mC4Yp9QIHjLxGcw9__bIYsaVN2GXqi2A&oe=64255079"
+        src="https://scontent-gig2-1.xx.fbcdn.net/v/t39.30808-6/316412633_569799071821419_8949402289786106028_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=C-ruyTPKXagAX_VzCZ1&_nc_ht=scontent-gig2-1.xx&oh=00_AfBpqjGHeiVNYZ7uCBEMSq2YRtWQaN4YwuTbx6k3Wg3zYw&oe=6433DACC"
         alt="IMAGE"
         className="md:w-80 md:h-80 w-32 h-32 object-contain rounded-full md:rounded md:relative absolute top-3 right-2"
       />

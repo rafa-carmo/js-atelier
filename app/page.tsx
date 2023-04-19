@@ -8,6 +8,51 @@ import { SliderComponent } from '@/components/Slider'
 import { PortfolioCard } from '@/components/Portfolio-Card'
 import { HobbieCard } from '../components/Hobbie-Card/index'
 
+const postsMock = [
+  {
+    title: '5 dicas para uma pele perfeita antes da maquiagem',
+    date: new Date(2023, 0, 20),
+  },
+  {
+    title: 'O guia definitivo para aplicação de cílios postiços',
+    date: new Date(2023, 0, 15),
+  },
+  {
+    title: 'Maquiagem para pele madura: dicas e truques para um look radiante',
+    date: new Date(2023, 1, 2),
+  },
+  {
+    title: 'Como escolher a cor de base ideal para sua pele',
+    date: new Date(2023, 1, 8),
+  },
+  {
+    title: 'Tendências de maquiagem para 2023: o que vem por aí?',
+    date: new Date(2023, 1, 18),
+  },
+  {
+    title: 'Maquiagem para festas: dicas para uma make arrasadora',
+    date: new Date(2023, 2, 1),
+  },
+  {
+    title: '10 erros comuns de maquiagem e como evitá-los',
+    date: new Date(2023, 2, 8),
+  },
+  {
+    title:
+      'O poder das cores na maquiagem: como escolher a tonalidade certa para cada ocasião',
+    date: new Date(2023, 2, 16),
+  },
+  {
+    title: 'Maquiagem para noivas: como criar um look inesquecível',
+    date: new Date(2023, 2, 27),
+  },
+  {
+    title:
+      'Os melhores produtos de maquiagem para pele oleosa: dicas e recomendações',
+    date: new Date(2023, 3, 5),
+  },
+]
+
 export default function Home() {
   return (
     <main>
@@ -18,8 +63,8 @@ export default function Home() {
           <Heading>Ultimos posts do Blog</Heading>
         </div>
         <SliderComponent className="py-24">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-            <PostCard key={item} title={`${item}`} />
+          {postsMock.map((item) => (
+            <PostCard key={item.title} {...item} />
           ))}
         </SliderComponent>
       </section>
@@ -48,9 +93,12 @@ export default function Home() {
           <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-28">
             <div className="flex flex-col justify-around lg:w-[412px] gap-5 md:gap-0">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industrys standard dummy text
-                ever since the 1500s,
+                Se você quer aprender a se maquiar sozinha e realçar ainda mais
+                a sua beleza, o nosso Curso de Auto Maquiagem é a escolha
+                perfeita para você! Neste curso, você aprenderá técnicas de
+                maquiagem e truques para criar looks para diversas ocasiões. O
+                curso é voltado para iniciantes e não é necessário ter
+                experiência prévia em maquiagem.
               </p>
               <button className="bg-background/40 px-9 py-4 border font-bold uppercase hover:bg-background/75 transition-colors duration-500">
                 Entre em contato
@@ -68,8 +116,16 @@ export default function Home() {
           <Heading>Hobbies</Heading>
         </div>
         <div className="grid md:grid-cols-2 grid-cols-1 mt-24 gap-24 px-10 md:p-0">
-          <HobbieCard title="Fotografia" image="/image 4.png" />
-          <HobbieCard title="Viagens" image="/image 5.png" />
+          <HobbieCard
+            title="Fotografia"
+            description="Fotografia é o meu hobby favorito. Capturar momentos e paisagens únicas me permite registrar lembranças especiais e expressar minha criatividade através das lentes da câmera."
+            image="/image 4.png"
+          />
+          <HobbieCard
+            title="Viagens"
+            description="Viajar é minha paixão! Conhecer novos lugares, culturas e pessoas enriquece minha vida e me permite explorar o mundo de uma forma única. Cada viagem é uma aventura e uma oportunidade de criar memórias inesquecíveis."
+            image="/image 5.png"
+          />
         </div>
       </section>
     </main>

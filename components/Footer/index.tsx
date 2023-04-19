@@ -7,8 +7,8 @@ export function Footer() {
           <div className="flex flex-col gap-5">
             <span className="font-title">Nome</span>
             <span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
-              arcu lorem cras lacus amet. In cras odio enim rhoncus consectetur.
+              JS Atelier é onde a arte encontra a beleza, com um toque pessoal e
+              atenção aos detalhes.
             </span>
           </div>
           <div className="flex flex-col gap-5">
