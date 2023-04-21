@@ -6,7 +6,7 @@ import { PostCard } from '@/components/Post-Card'
 import { Heading } from '@/components/Heading'
 import { SliderComponent } from '@/components/Slider'
 import { PortfolioCard } from '@/components/Portfolio-Card'
-import { HobbieCard } from '../components/Hobbie-Card/index'
+import { HobbieCard } from '@/components/Hobbie-Card/index'
 
 const postsMock = [
   {

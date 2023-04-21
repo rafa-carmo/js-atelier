@@ -1,4 +1,4 @@
-import { Heading } from '@comp/Heading'
+import { Heading } from '@/components/Heading'
 
 export function About() {
   return (
