@@ -57,8 +57,10 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <About />
-      <section className=" w-full bg-white flex flex-col py-16 gap-3">
+      <section id="sobre">
+        <About />
+      </section>
+      <section className=" w-full bg-white flex flex-col py-16 gap-3" id="blog">
         <div className="container mx-auto px-16 ">
           <Heading>Ultimos posts do Blog</Heading>
         </div>
@@ -69,7 +71,7 @@ export default function Home() {
         </SliderComponent>
       </section>
 
-      <section className="container mx-auto py-16 px-16">
+      <section className="container mx-auto py-16 px-16" id="portfolio">
         <Heading>Portfólio</Heading>
         <div className="grid md:grid-cols-2 grid-cols-1 mt-24 gap-14">
           <PortfolioCard
@@ -87,7 +89,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white">
+      <section className="bg-white" id="curso">
         <div className="container mx-auto py-16 px-16">
           <Heading>Curso de Automaquiagem</Heading>
           <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-28">
@@ -111,7 +113,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto py-16 ">
+      <section className="container mx-auto py-20 my-22 " id="hobbies">
         <div className="px-16">
           <Heading>Hobbies</Heading>
         </div>
