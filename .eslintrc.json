@@ -1,6 +1,10 @@
 {
+  "env": {
+    "jest": true,
+    "node": true
+  },
   "extends": [
     "next/core-web-vitals", 
     "@rocketseat/eslint-config/react"
-  ]
+  ],
 }
