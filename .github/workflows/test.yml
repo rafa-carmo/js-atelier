@@ -16,7 +16,7 @@ jobs:
           check-latest: false
 
       - name: install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: run tests
         run: npm run test
