@@ -1,5 +1,6 @@
 import React from 'react'
 import './slick.css'
+
 // import './slick-theme.css'
 import Slider, { Settings } from 'react-slick'
 

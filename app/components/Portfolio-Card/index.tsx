@@ -1,7 +1,12 @@
+interface ImageProps {
+  url: string
+  alt?: string
+}
+
 interface PortfolioCardProps {
   title: string
   description: string
-  image: string
+  image: ImageProps
 }
 
 export function PortfolioCard({
@@ -15,8 +20,8 @@ export function PortfolioCard({
       <span>{description}</span>
       <img
         className="w-full md:h-[540px] rounded object-fill"
-        src={image}
-        alt="IMAGE"
+        src={image.url}
+        alt={image.alt || title}
       />
     </div>
   )

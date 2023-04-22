@@ -17,6 +17,8 @@ export function Menu() {
         className={`fixed top-10 bottom-0 w-52 bg-white z-30 transition-all duration-500 ease-in-out pt-10 flex flex-col justify-between [&>a]:border-black last:border-transparent ${
           active ? 'left-0 opacity-100' : '-left-56 opacity-0'
         }`}
+        data-testid="menu-lateral"
+        aria-hidden={!active}
       >
         <nav className=" flex flex-col" onClick={menuToogle}>
           <LinkMenu title="Inicio" link="/" />

@@ -7,5 +7,7 @@ describe('<Hero />', () => {
         const {container} = render(<Hero />)
 
         expect(screen.getByText(/js atelier/i))
+        expect(screen.getByText(/maquiadora profissional/i))
+        expect(screen.getByRole('button', {name: "Agende sua Maquiagem"}))
     })
 })

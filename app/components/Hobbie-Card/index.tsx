@@ -1,5 +1,10 @@
+
+interface ImageProps {
+  url: string
+  alt?: string
+}
 interface HobbieCardProps {
-  image: string
+  image: ImageProps
   title: string
   description?: string
 }
@@ -10,9 +15,9 @@ export function HobbieCard({ image, title, description }: HobbieCardProps) {
       <div className="absolute top-0 bottom-0 left-0 right-0 z-10 md:group-hover:bg-black/50 bg-black/50   transition-all duration-500">
         {' '}
       </div>
-      <span className="absolute top-5 left-5 font-title text-title font-bold z-20 md:group-hover:text-white  text-white transition-colors duration-700">
+      <h2 className="absolute top-5 left-5 font-title text-title font-bold z-20 md:group-hover:text-white  text-white transition-colors duration-700">
         {title}
-      </span>
+      </h2>
 
       <span
         className="absolute 
@@ -24,7 +29,7 @@ export function HobbieCard({ image, title, description }: HobbieCardProps) {
           {description}
         </p>
       </span>
-      <img src={image} alt="IMAGE" className="relative z-0" />
+      <img src={image.url} alt={image.alt || title} className="relative z-0" />
     </div>
   )
 }
