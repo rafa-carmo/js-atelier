@@ -1,0 +1,22 @@
+name: Pipeline
+on: [push, pull_request]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Copy files from repo
+        uses: actions/checkout@v3
+      
+      - name: Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '19.7.0'
+          check-latest: false
+
+      - name: install dependencies
+        run: npm install
+
+      - name: run tests
+        run: npm run test
