@@ -10,7 +10,7 @@
     "test": "jest"
   },
   "engines" : { 
-    "node" : "^19.0.0"
+    "node" : ">=17.0.0 <19.9.9"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.8",
