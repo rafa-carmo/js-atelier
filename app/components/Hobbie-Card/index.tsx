@@ -1,4 +1,3 @@
-
 interface ImageProps {
   url: string
   alt?: string

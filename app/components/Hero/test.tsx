@@ -1,13 +1,13 @@
-import {render, screen} from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
-import {Hero} from '.'
+import { Hero } from '.'
 
 describe('<Hero />', () => {
-    it('should render a hero', () => {
-        const {container} = render(<Hero />)
+  it('should render a hero', () => {
+    render(<Hero />)
 
-        expect(screen.getByText(/js atelier/i))
-        expect(screen.getByText(/maquiadora profissional/i))
-        expect(screen.getByRole('button', {name: "Agende sua Maquiagem"}))
-    })
+    expect(screen.getByText(/js atelier/i))
+    expect(screen.getByText(/maquiadora profissional/i))
+    expect(screen.getByRole('button', { name: 'Agende sua Maquiagem' }))
+  })
 })

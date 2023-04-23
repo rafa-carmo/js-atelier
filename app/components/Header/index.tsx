@@ -12,10 +12,14 @@ export function Header() {
         <div className="container text-white mx-auto h-20 flex justify-between items-center px-5 md:p-0">
           <span className="font-black">Logo</span>
 
-            <button onClick={menuToogle} className="cursor-pointer" title="Abrir menu" data-testid="open-menu-button">
-              {active ? <X size={32} /> : <List size={32} />}
-            </button>
-  
+          <button
+            onClick={menuToogle}
+            className="cursor-pointer"
+            title="Abrir menu"
+            data-testid="open-menu-button"
+          >
+            {active ? <X size={32} /> : <List size={32} />}
+          </button>
         </div>
       </nav>
     </>

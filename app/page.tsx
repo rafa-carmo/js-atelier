@@ -12,54 +12,64 @@ const postsMock = [
   {
     title: '5 dicas para uma pele perfeita antes da maquiagem',
     date: new Date(2023, 0, 20),
-    image: "https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    image:
+      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
   },
   {
     title: 'O guia definitivo para aplicação de cílios postiços',
     date: new Date(2023, 0, 15),
-    image: "https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    image:
+      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
   },
   {
     title: 'Maquiagem para pele madura: dicas e truques para um look radiante',
     date: new Date(2023, 1, 2),
-    image: "https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    image:
+      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
   },
   {
     title: 'Como escolher a cor de base ideal para sua pele',
     date: new Date(2023, 1, 8),
-    image: "https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    image:
+      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
   },
   {
     title: 'Tendências de maquiagem para 2023: o que vem por aí?',
     date: new Date(2023, 1, 18),
-    image: "https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    image:
+      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
   },
   {
     title: 'Maquiagem para festas: dicas para uma make arrasadora',
     date: new Date(2023, 2, 1),
-    image: "https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    image:
+      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
   },
   {
     title: '10 erros comuns de maquiagem e como evitá-los',
     date: new Date(2023, 2, 8),
-    image: "https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    image:
+      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
   },
   {
     title:
       'O poder das cores na maquiagem: como escolher a tonalidade certa para cada ocasião',
     date: new Date(2023, 2, 16),
-    image: "https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    image:
+      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
   },
   {
     title: 'Maquiagem para noivas: como criar um look inesquecível',
     date: new Date(2023, 2, 27),
-    image: "https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    image:
+      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
   },
   {
     title:
       'Os melhores produtos de maquiagem para pele oleosa: dicas e recomendações',
     date: new Date(2023, 3, 5),
-    image: "https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    image:
+      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
   },
 ]
 
@@ -68,14 +78,17 @@ export default function Home() {
     <main>
       <Hero />
       <section id="sobre">
-        <About title="Bem Vindo a JS Atelier" about='Oi, meu nome é Jeniffer e eu sou uma maquiadora apaixonada por beleza!
+        <About
+          title="Bem Vindo a JS Atelier"
+          about="Oi, meu nome é Jeniffer e eu sou uma maquiadora apaixonada por beleza!
           Há anos venho trabalhando nessa área, atendendo a noivas, modelos e
           pessoas comuns que querem se sentir ainda mais bonitas e confiantes.
           <br />
           Eu acredito que a maquiagem é uma forma maravilhosa de realçar a
           beleza única de cada pessoa. Por isso, sempre busco criar looks que
           combinem com o estilo de vida e as características pessoais de cada
-          cliente.' />
+          cliente."
+        />
       </section>
       <section className=" w-full bg-white flex flex-col py-16 gap-3" id="blog">
         <div className="container mx-auto px-16 ">
@@ -95,13 +108,17 @@ export default function Home() {
             title="Gestantes"
             description="Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the"
-            image={{url: "https://scontent-gig2-1.xx.fbcdn.net/v/t1.6435-9/97319440_2533993973519901_7751963619029417984_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a26aad&_nc_ohc=H5EeckslGCUAX_eO9Mr&_nc_ht=scontent-gig2-1.xx&oh=00_AfDqOtQFjp0llz5gSO-XqZRm-Ko5-EUetwm_9dPpvmH95w&oe=6448CE03"}}
+            image={{
+              url: 'https://scontent-gig2-1.xx.fbcdn.net/v/t1.6435-9/97319440_2533993973519901_7751963619029417984_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a26aad&_nc_ohc=H5EeckslGCUAX_eO9Mr&_nc_ht=scontent-gig2-1.xx&oh=00_AfDqOtQFjp0llz5gSO-XqZRm-Ko5-EUetwm_9dPpvmH95w&oe=6448CE03',
+            }}
           />
           <PortfolioCard
             title="Maquiagem"
             description="Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the"
-            image={{url: "https://scontent-gig2-1.xx.fbcdn.net/v/t1.6435-9/196694329_2836471656605463_4583705450766313014_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9267fe&_nc_ohc=1jzvuk18oR4AX934PMg&_nc_ht=scontent-gig2-1.xx&oh=00_AfBFAz1mtNvFwMnaaLvaiXekoSAp3Mef0EoStRPB3cVBlw&oe=6448BC86"}}
+            image={{
+              url: 'https://scontent-gig2-1.xx.fbcdn.net/v/t1.6435-9/196694329_2836471656605463_4583705450766313014_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9267fe&_nc_ohc=1jzvuk18oR4AX934PMg&_nc_ht=scontent-gig2-1.xx&oh=00_AfBFAz1mtNvFwMnaaLvaiXekoSAp3Mef0EoStRPB3cVBlw&oe=6448BC86',
+            }}
           />
         </div>
       </section>
@@ -138,12 +155,12 @@ export default function Home() {
           <HobbieCard
             title="Fotografia"
             description="Fotografia é o meu hobby favorito. Capturar momentos e paisagens únicas me permite registrar lembranças especiais e expressar minha criatividade através das lentes da câmera."
-            image={{url: "/image 4.png", alt: "Fotografia"}}
+            image={{ url: '/image 4.png', alt: 'Fotografia' }}
           />
           <HobbieCard
             title="Viagens"
             description="Viajar é minha paixão! Conhecer novos lugares, culturas e pessoas enriquece minha vida e me permite explorar o mundo de uma forma única. Cada viagem é uma aventura e uma oportunidade de criar memórias inesquecíveis."
-            image={{url: "/image 5.png", alt: "Viagens"}}
+            image={{ url: '/image 5.png', alt: 'Viagens' }}
           />
         </div>
       </section>
