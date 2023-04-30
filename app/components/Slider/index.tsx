@@ -4,7 +4,7 @@ import './slick.css'
 // import './slick-theme.css'
 import Slider, { Settings } from 'react-slick'
 
-const settings: Settings = {
+const baseSettings: Settings = {
   arrows: false,
   dots: false,
   speed: 500,
@@ -19,16 +19,16 @@ const settings: Settings = {
       },
     },
     {
-      breakpoint: 768,
+      breakpoint: 900,
       settings: {
-        slidesToShow: 2.4,
+        slidesToShow: 2.2,
         slidesToScroll: 3,
       },
     },
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 2.1,
+        slidesToShow: 1.8,
         slidesToScroll: 2,
         initialSlide: 2,
       },
@@ -36,7 +36,7 @@ const settings: Settings = {
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 1.3,
+        slidesToShow: 1,
         slidesToScroll: 1,
       },
     },
@@ -46,10 +46,15 @@ const settings: Settings = {
 interface SliderProps {
   className?: string
   children: React.ReactNode
+  settings?: Settings
 }
-export function SliderComponent({ className, children }: SliderProps) {
+export function SliderComponent({
+  className,
+  children,
+  settings,
+}: SliderProps) {
   return (
-    <Slider className={className} {...settings}>
+    <Slider className={className} {...baseSettings} {...settings}>
       {children}
     </Slider>
   )

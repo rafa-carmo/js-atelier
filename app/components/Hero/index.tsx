@@ -6,7 +6,8 @@ export function Hero() {
       <div className="container mx-auto flex items-center flex-col gap-20">
         <div className="flex items-center flex-col gap-3">
           <h2 className="font-bold text-title font-title">JS Atelier</h2>
-          <h2 className="font-bold text-title font-title text-center">
+
+          <h2 className="font-bold text-lg md:text-title font-title text-center">
             Maquiadora Profissional
           </h2>
         </div>

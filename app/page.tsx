@@ -7,71 +7,7 @@ import { Heading } from '@/components/Heading'
 import { SliderComponent } from '@/components/Slider'
 import { PortfolioCard } from '@/components/Portfolio-Card'
 import { HobbieCard } from '@/components/Hobbie-Card/index'
-
-const postsMock = [
-  {
-    title: '5 dicas para uma pele perfeita antes da maquiagem',
-    date: new Date(2023, 0, 20),
-    image:
-      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    title: 'O guia definitivo para aplicação de cílios postiços',
-    date: new Date(2023, 0, 15),
-    image:
-      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    title: 'Maquiagem para pele madura: dicas e truques para um look radiante',
-    date: new Date(2023, 1, 2),
-    image:
-      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    title: 'Como escolher a cor de base ideal para sua pele',
-    date: new Date(2023, 1, 8),
-    image:
-      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    title: 'Tendências de maquiagem para 2023: o que vem por aí?',
-    date: new Date(2023, 1, 18),
-    image:
-      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    title: 'Maquiagem para festas: dicas para uma make arrasadora',
-    date: new Date(2023, 2, 1),
-    image:
-      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    title: '10 erros comuns de maquiagem e como evitá-los',
-    date: new Date(2023, 2, 8),
-    image:
-      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    title:
-      'O poder das cores na maquiagem: como escolher a tonalidade certa para cada ocasião',
-    date: new Date(2023, 2, 16),
-    image:
-      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    title: 'Maquiagem para noivas: como criar um look inesquecível',
-    date: new Date(2023, 2, 27),
-    image:
-      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-  {
-    title:
-      'Os melhores produtos de maquiagem para pele oleosa: dicas e recomendações',
-    date: new Date(2023, 3, 5),
-    image:
-      'https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  },
-]
+import postsMock from '@/mocks/posts'
 
 export default function Home() {
   return (
@@ -94,9 +30,9 @@ export default function Home() {
         <div className="container mx-auto px-16 ">
           <Heading>Ultimos posts do Blog</Heading>
         </div>
-        <SliderComponent className="py-24">
+        <SliderComponent className="my-24">
           {postsMock.map((item) => (
-            <PostCard key={item.title} {...item} />
+            <PostCard key={item.title} {...item} scale />
           ))}
         </SliderComponent>
       </section>
