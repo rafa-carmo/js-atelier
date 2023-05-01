@@ -17,7 +17,7 @@ export function About({ title, about }: AboutProps) {
         <p className="text-sm" dangerouslySetInnerHTML={{ __html: about }}></p>
       </div>
       <img
-        src="https://scontent-gig2-1.xx.fbcdn.net/v/t39.30808-6/316412633_569799071821419_8949402289786106028_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=C-ruyTPKXagAX_VzCZ1&_nc_ht=scontent-gig2-1.xx&oh=00_AfBpqjGHeiVNYZ7uCBEMSq2YRtWQaN4YwuTbx6k3Wg3zYw&oe=6433DACC"
+        src="/perfil.jpg"
         alt="IMAGE"
         className="md:w-80 md:h-80 w-32 h-32 object-contain rounded-full md:rounded md:relative absolute top-3 right-2"
       />

@@ -1,3 +1,6 @@
+'use client'
+import { FacebookLogo, InstagramLogo } from '@phosphor-icons/react'
+
 export function Footer() {
   return (
     <footer className="py-16 bg-black px-5 md:px-0">
@@ -14,13 +17,17 @@ export function Footer() {
           <div className="flex flex-col gap-5">
             <span className="font-title">Sobre</span>
             <span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
-              arcu lorem cras lacus amet. In cras odio enim rhoncus consectetur.
+              Oi, meu nome é Jeniffer e eu sou uma maquiadora apaixonada por
+              beleza!
             </span>
           </div>
           <div className="flex items-center md:justify-start justify-center gap-4">
-            <span className="border border-white rounded-full p-3">Face</span>
-            <span className="border border-white rounded-full p-3">Insta</span>
+            <span className="border border-white rounded-full p-3">
+              <FacebookLogo size={24} />
+            </span>
+            <span className="border border-white rounded-full p-3">
+              <InstagramLogo size={24} />
+            </span>
           </div>
         </div>
       </div>
