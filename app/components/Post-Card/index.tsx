@@ -1,5 +1,6 @@
 import { format } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
+import Link from 'next/link'
 
 interface PostCardProps {
   title: string
@@ -33,17 +34,21 @@ export function PostCard({
           </p>
         </div>
 
-        <h3 className="text-center font-bold line-clamp-2 max-w-[90%] h-fit">
+        <Link
+          href="/blog/teste"
+          className="text-center font-bold line-clamp-2 max-w-[90%] h-fit"
+        >
           {title}
-        </h3>
+        </Link>
         <div className="flex flex-1 pt-2 flex-col items-center gap-2 justify-between">
           <p className="text-center font-light line-clamp-4">
             {shortDescription}
           </p>
-
-          <button className="bg-background hover:bg-background/50 py-2 px-4 rounded-lg transition-colors duration-500">
-            Continue lendo
-          </button>
+          <Link href="/blog/teste">
+            <button className="bg-background hover:bg-background/50 py-2 px-4 rounded-lg transition-colors duration-500">
+              Continue lendo
+            </button>
+          </Link>
         </div>
       </div>
     </article>
