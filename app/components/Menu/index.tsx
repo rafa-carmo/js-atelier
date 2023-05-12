@@ -1,9 +1,11 @@
 import { useMenuContext } from '@/contexts/menu'
 import { LinkMenu } from './link'
 import { FacebookLogo, InstagramLogo } from '@phosphor-icons/react'
+import { signOut, useSession } from 'next-auth/react'
 
 export function Menu() {
   const { active, menuToogle } = useMenuContext()
+  const { data: session } = useSession()
   return (
     <>
       <div
@@ -28,6 +30,7 @@ export function Menu() {
           <LinkMenu title="Curso" link="#curso" />
           <LinkMenu title="Hobbies" link="#hobbies" />
         </nav>
+        {session?.user && <button onClick={() => signOut()}>Sair</button>}
         <div className="flex items-center justify-center gap-3 pb-3">
           <a href="#">
             <FacebookLogo size={24} />

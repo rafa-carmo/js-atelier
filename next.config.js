@@ -3,6 +3,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
     forceSwcTransforms: true,
+    enableUndici: true
   },
 }
 
