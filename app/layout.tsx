@@ -5,11 +5,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { MenuContextProvider } from '@/contexts/menu'
 import { SessionProvider } from 'next-auth/react'
-
-export const metadata = {
-  title: 'JS Atelier',
-  description: 'JS Atelier',
-}
+import Head from 'next/head'
 
 export default function RootLayout({
   children,
@@ -21,6 +17,9 @@ export default function RootLayout({
       <body className="bg-background min-h-screen">
         <SessionProvider>
           <MenuContextProvider>
+            <Head>
+              <title>JS Atelier</title>
+            </Head>
             <Header />
             <main className="pt-20">{children}</main>
             <Footer />
