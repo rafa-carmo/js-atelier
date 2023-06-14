@@ -3,7 +3,15 @@ const nextConfig = {
   experimental: {
     appDir: true,
     forceSwcTransforms: true,
-    enableUndici: true
+    enableUndici: true,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'media.graphassets.com',
+      },
+    ],
   },
 }
 

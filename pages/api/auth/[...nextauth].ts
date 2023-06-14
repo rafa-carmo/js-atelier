@@ -6,7 +6,7 @@ import { hygraphClientPublic } from '@/lib/hygraph'
 
 const GetNextAuthUserByEmail = gql`
   query GetNextAuthUserByEmail($email: String!) {
-    user: userPage(where: { email: $email }, stage: DRAFT) {
+    user: userPage(where: { email: $email }, stage: PUBLISHED) {
       id
       email
       password

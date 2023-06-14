@@ -30,7 +30,19 @@ export function Menu() {
           <LinkMenu title="Curso" link="#curso" />
           <LinkMenu title="Hobbies" link="#hobbies" />
         </nav>
-        {session?.user && <button onClick={() => signOut()}>Sair</button>}
+        <nav className=" flex flex-col" onClick={menuToogle}>
+          {session?.user && (
+            <>
+              <LinkMenu title="Admin" link="/admin" />
+              <a
+                className="w-full h-12 font-bold text-lg px-10 pt-5 border-b hover:bg-background transition-colors duration-300 cursor-pointer"
+                onClick={() => signOut()}
+              >
+                <span> Sair</span>
+              </a>
+            </>
+          )}
+        </nav>
         <div className="flex items-center justify-center gap-3 pb-3">
           <a href="#">
             <FacebookLogo size={24} />

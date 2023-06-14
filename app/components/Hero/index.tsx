@@ -1,14 +1,19 @@
 'use client'
 
-export function Hero() {
+interface HeroProps {
+  title: string
+  shortDescription: string
+}
+
+export function Hero({ shortDescription, title }: HeroProps) {
   return (
     <section className="bg-white h-hero grid place-items-center  px-5 pb-20">
       <div className="container mx-auto flex items-center flex-col gap-20">
         <div className="flex items-center flex-col gap-3">
-          <h2 className="font-bold text-title font-title">JS Atelier</h2>
+          <h2 className="font-bold text-title font-title">{title}</h2>
 
           <h2 className="font-bold text-lg md:text-title font-title text-center">
-            Maquiadora Profissional
+            {shortDescription}
           </h2>
         </div>
 

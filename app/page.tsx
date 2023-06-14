@@ -1,77 +1,143 @@
-'use client' // this is a client component 👈🏽
-
 import { About } from '@/components/About'
 import { Hero } from '@/components/Hero'
-import { PostCard } from '@/components/Post-Card'
 import { Heading } from '@/components/Heading'
-import { SliderComponent } from '@/components/Slider'
 import { PortfolioCard } from '@/components/Portfolio-Card'
 import { HobbieCard } from '@/components/Hobbie-Card/index'
-import postsMock from '@/mocks/posts'
+import SliderPosts from '@/components/SliderPosts'
+import { gql } from 'graphql-request'
+import { hygraphClientPublic } from './lib/hygraph'
+import { PostCardProps } from '@/components/Post-Card'
 
-export default function Home() {
+export const revalidate = 7200
+
+const QueryHomePage = gql`
+  query HomePage {
+    page(where: { page: "home" }) {
+      seo {
+        title
+        description
+      }
+      hero {
+        title
+        shortDescription
+      }
+      about {
+        title
+        about
+      }
+      portfolio {
+        id
+        title
+        description
+        picture {
+          url
+        }
+      }
+      courese {
+        title
+        description
+        url
+      }
+      hobbies {
+        id
+        title
+        description
+        picture {
+          url
+        }
+      }
+    }
+    posts(orderBy: postedAt_DESC, first: 10) {
+      id
+      title
+      slug
+      subtitle
+      stage
+      content
+      picture {
+        url(
+          transformation: {
+            image: { resize: { fit: crop, width: 366, height: 208 } }
+          }
+        )
+      }
+      createdAt
+    }
+  }
+`
+interface HomePage {
+  seo: {
+    title: string
+    description: string
+  }
+  hero: {
+    title: string
+    shortDescription: string
+  }
+  about: {
+    title: string
+    about: string
+  }
+  portfolio: {
+    id: string
+    title: string
+    description: string
+    picture: {
+      url: string
+    }
+  }[]
+  courese: {
+    title: string
+    description: string
+    url: string
+  }
+  hobbies: {
+    id: string
+    title: string
+    description: string
+    picture: {
+      url: string
+    }
+  }[]
+}
+
+export default async function Home() {
+  const { page, posts }: { page: HomePage; posts: PostCardProps[] } =
+    await hygraphClientPublic.request(QueryHomePage)
+
   return (
     <main>
-      <Hero />
+      <Hero {...page.hero} />
       <section id="sobre">
-        <About
-          title="Bem Vindo a JS Atelier"
-          about="Oi, meu nome é Jeniffer e eu sou uma maquiadora apaixonada por beleza!
-          Há anos venho trabalhando nessa área, atendendo a noivas, modelos e
-          pessoas comuns que querem se sentir ainda mais bonitas e confiantes.
-          <br />
-          Eu acredito que a maquiagem é uma forma maravilhosa de realçar a
-          beleza única de cada pessoa. Por isso, sempre busco criar looks que
-          combinem com o estilo de vida e as características pessoais de cada
-          cliente."
-        />
+        <About {...page.about} />
       </section>
       <section className=" w-full bg-white flex flex-col py-16 gap-3" id="blog">
         <div className="container mx-auto px-16 ">
           <Heading>Ultimos posts do Blog</Heading>
         </div>
-        <SliderComponent className="my-24">
-          {postsMock.map((item) => (
-            <PostCard key={item.title} {...item} scale />
-          ))}
-        </SliderComponent>
+        <SliderPosts posts={posts} />
       </section>
 
       <section className="container mx-auto py-16 px-16" id="portfolio">
         <Heading>Portfólio</Heading>
         <div className="grid md:grid-cols-2 grid-cols-1 mt-24 gap-14">
-          <PortfolioCard
-            title="Gestantes"
-            description="Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the"
-            image={{
-              url: '/Gestante.jpg',
-            }}
-          />
-          <PortfolioCard
-            title="Maquiagem"
-            description="Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the"
-            image={{
-              url: '/maquiagem.jpg',
-            }}
-          />
+          {page.portfolio.map((item) => (
+            <PortfolioCard
+              key={item.id}
+              title={item.title}
+              description={item.description}
+              image={item.picture}
+            />
+          ))}
         </div>
       </section>
 
       <section className="bg-white" id="curso">
         <div className="container mx-auto py-16 px-16">
-          <Heading>Curso de Automaquiagem</Heading>
+          <Heading>{page.courese.title}</Heading>
           <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-28">
             <div className="flex flex-col justify-around lg:w-[412px] gap-5 md:gap-0">
-              <p>
-                Se você quer aprender a se maquiar sozinha e realçar ainda mais
-                a sua beleza, o nosso Curso de Auto Maquiagem é a escolha
-                perfeita para você! Neste curso, você aprenderá técnicas de
-                maquiagem e truques para criar looks para diversas ocasiões. O
-                curso é voltado para iniciantes e não é necessário ter
-                experiência prévia em maquiagem.
-              </p>
+              <p>{page.courese.description}</p>
               <button className="bg-background/40 px-9 py-4 border font-bold uppercase hover:bg-background/75 transition-colors duration-500">
                 Entre em contato
               </button>
@@ -88,16 +154,14 @@ export default function Home() {
           <Heading>Hobbies</Heading>
         </div>
         <div className="grid md:grid-cols-2 grid-cols-1 mt-24 gap-24 px-10 md:p-0">
-          <HobbieCard
-            title="Fotografia"
-            description="Fotografia é o meu hobby favorito. Capturar momentos e paisagens únicas me permite registrar lembranças especiais e expressar minha criatividade através das lentes da câmera."
-            image={{ url: '/image 4.png', alt: 'Fotografia' }}
-          />
-          <HobbieCard
-            title="Viagens"
-            description="Viajar é minha paixão! Conhecer novos lugares, culturas e pessoas enriquece minha vida e me permite explorar o mundo de uma forma única. Cada viagem é uma aventura e uma oportunidade de criar memórias inesquecíveis."
-            image={{ url: '/image 5.png', alt: 'Viagens' }}
-          />
+          {page.hobbies.map((hobbie) => (
+            <HobbieCard
+              key={hobbie.id}
+              title={hobbie.title}
+              description={hobbie.description}
+              image={{ url: hobbie.picture.url, alt: hobbie.title }}
+            />
+          ))}
         </div>
       </section>
     </main>

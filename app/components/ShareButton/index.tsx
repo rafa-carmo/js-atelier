@@ -3,7 +3,6 @@ import { FacebookLogo, TwitterLogo, WhatsappLogo } from '@phosphor-icons/react'
 
 interface ShareButtonProps {
   type: 'whatsapp' | 'facebook' | 'twitter'
-  url: string
 }
 
 const props = {
@@ -27,7 +26,7 @@ const props = {
   },
 }
 
-export function ShareButton({ type, url }: ShareButtonProps) {
+export function ShareButton({ type }: ShareButtonProps) {
   return (
     <div
       className={`flex items-center gap-2  rounded-full px-4 py-2 font-bold text-white ${props[type].bg} ${props[type].text}`}
